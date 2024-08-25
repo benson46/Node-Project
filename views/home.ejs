@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BrocampLearn-Home Page</title>
+  <link rel="stylesheet" href="/styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="icon" href="/images/logo-no-background.png" type="icon/x">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg d-flex justify-content-center align-items-center">
+    <div>
+      <form action="/signout" method="POST">
+       
+        
+        <button type="submit" class="btn btn-primary">SignOut</button>
+      </form>
+      
+    </div>
+  </nav>
+  
+
+  <main>
+    <div class="card-group">
+      <div class="card">
+        <img src="images/cyber_topic_46.jpg" class="card-img-top" alt="HTML Tutorial">
+        <div class="card-body">
+          <h5 class="card-title">HTML Tutorial For Beginners</h5>
+          <p class="card-text">Welcome to the ultimate HTML tutorial! This comprehensive guide is designed for beginners and covers everything you need to know to start building your own web pages from scratch.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/3d894051b4e7.webp" class="card-img-top" alt="CSS Tutorial">
+        <div class="card-body">
+          <h5 class="card-title">CSS Tutorial For Beginners</h5>
+          <p class="card-text">Welcome to the complete CSS tutorial! This guide is designed to take you from a beginner to a confident web designer, capable of creating visually appealing and responsive web pages.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="/images/1_LyZcwuLWv2FArOumCxobpA.png" class="card-img-top" alt="JavaScript Tutorial">
+        <div class="card-body">
+          <h5 class="card-title">JavaScript Tutorial For Beginners</h5>
+          <p class="card-text">Welcome to the comprehensive JavaScript tutorial! This guide is designed to take you from a beginner to an advanced level, enabling you to create interactive and dynamic web pages.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+    </div>
+    <%= username %>
+  </main>
+ 
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
