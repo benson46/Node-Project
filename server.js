@@ -3,19 +3,23 @@ const session = require('express-session');
 const bodyParser = require('body-parser');
 const path = require('path');
 const nocache = require('nocache');
-
-
-
 const app = express();
 
+
+const logger = (req, res, next) => {
+  console.log('middleware');
+  // res.send("hellow")
+  next();
+  
+}
+
+app.use(logger)
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'ejs');
 
 // Use nocache middleware to prevent caching
 app.use(nocache());
-
-
 
 app.use(session({
   secret: 'your_secret_key',
@@ -69,7 +73,7 @@ app.post('/login', (req, res) => {
 // Route for the home page
 app.get('/home', (req, res) => {
   if (req.session.loggedIn) {
-    res.render('home',{username : predefinedUser.username});
+    res.render('home', { username: predefinedUser.username });
   } else {
     res.redirect('/login');
   }
